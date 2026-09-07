@@ -1,4 +1,5 @@
-// User configuration for the startpage - update the palette, location, and your preferred tabs, categories, and links
+// User configuration for the startpage
+// Bookmarks imported from your collection and grouped into clean, practical tabs.
 
 // Available themes: latte, frappe, mocha, macchiato
 const preferredLightTheme = latte;
@@ -9,10 +10,9 @@ let palette = initThemeSystem(preferredLightTheme, preferredDarkTheme);
 const default_configuration = {
   overrideStorage: true,
   temperature: {
-    location: "saudi arabia",
+    location: "Dammam, Saudi Arabia",
     scale: "C",
-    // Optional OpenWeatherMap API key, get a free one at https://openweathermap.org/api
-    // Leave empty to keep the placeholder and skip the network request
+    // Optional OpenWeatherMap API key. Leave empty to skip the network request.
     appId: "",
   },
   clock: {
@@ -36,275 +36,328 @@ const default_configuration = {
     default: "d",
   },
   keybindings: {
-    "s": "search-bar",
+    s: "search-bar",
   },
   disabled: [],
   localIcons: true,
   localFonts: true,
-  fastlink: "https://www.perplexity.ai",
+  fastlink: "https://www.google.com",
   openLastVisitedTab: true,
   tabs: [
     {
-      name: "myself",
+      name: "home",
       background_url: "src/img/banners/banner_11.gif",
       categories: [
         {
-          name: "bookmarks",
+          name: "daily",
           links: [
             {
-              name: "raindrop",
-              url: "https://app.raindrop.io",
-              icon: "droplet-bolt",
-              icon_color: palette.green,
+              name: "google",
+              url: "https://www.google.com/webhp?hl=en&sa=X&ved=0ahUKEwjX6o65-935AhUAVfEDHbcnCdkQPAgI",
+              icon: "brand-google",
+              icon_color: palette.blue,
             },
-            {
-              name: "musicForProgramming();",
-              url: "https://musicforprogramming.net",
-              icon: "binary-tree",
-              icon_color: palette.peach,
-            },
-          ],
-        },
-        {
-          name: "workspace",
-          links: [
             {
               name: "gmail",
-              url: "https://mail.google.com",
+              url: "https://mail.google.com/mail/u/0/#inbox",
               icon: "brand-gmail",
-              icon_color: palette.green,
-            },
-            {
-              name: "docs",
-              url: "https://docs.google.com",
-              icon: "file-type-doc",
-              icon_color: palette.peach,
-            },
-            {
-              name: "sheets",
-              url: "https://docs.google.com/spreadsheets",
-              icon: "table",
               icon_color: palette.red,
             },
             {
-              name: "drive",
-              url: "https://drive.google.com/drive/home",
-              icon: "brand-google-drive",
-              icon_color: palette.blue,
-            },
-          ],
-        },
-        {
-          name: "media",
-          links: [
-            {
-              name: "уп",
-              url: "https://www.pravda.com.ua",
-              icon: "news",
-              icon_color: palette.green,
-            },
-            {
-              name: "mil.in.ua",
-              url: "https://mil.in.ua",
-              icon: "badge-filled",
-              icon_color: palette.peach,
-            },
-            {
-              name: "куток",
-              url: "https://kutok.io",
-              icon: "border-radius",
-              icon_color: palette.red,
-            },
-            {
-              name: "ґрунт",
-              url: "https://grnt.media",
-              icon: "eye-bolt",
-              icon_color: palette.blue,
-            },
-            {
-              name: "village",
-              url: "https://www.village.com.ua",
-              icon: "home-2",
-              icon_color: palette.mauve,
-            },
-          ],
-        },
-      ],
-    },
-    {
-      name: "dev",
-      background_url: "src/img/banners/banner_07.gif",
-      categories: [
-        {
-          name: "development",
-          links: [
-            {
-              name: "github",
-              url: "https://github.com",
-              icon: "brand-github",
-              icon_color: palette.green,
-            },
-            {
-              name: "stackoverflow",
-              url: "https://stackoverflow.com",
-              icon: "brand-stackoverflow",
-              icon_color: palette.peach,
-            },
-            {
-              name: "duckdb",
-              url: "https://app.motherduck.com",
-              icon: "file-type-sql",
-              icon_color: palette.red,
-            },
-            {
-              name: "collab",
-              url: "https://colab.research.google.com",
-              icon: "notebook",
-              icon_color: palette.mauve,
-            },
-          ],
-        },
-        {
-          name: "challenges",
-          links: [
-            {
-              name: "kaggle",
-              url: "https://www.kaggle.com",
-              icon: "brain",
-              icon_color: palette.green,
-            },
-            {
-              name: "leetcode",
-              url: "https://leetcode.com",
-              icon: "code-plus",
-              icon_color: palette.peach,
-            },
-            {
-              name: "exercism",
-              url: "https://exercism.org",
-              icon: "code-minus",
-              icon_color: palette.red,
-            },
-            {
-              name: "aoc",
-              url: "https://adventofcode.com",
-              icon: "brand-linktree",
-              icon_color: palette.blue,
-            },
-          ],
-        },
-        {
-          name: "resources",
-          links: [
-            {
-              name: "dou",
-              url: "https://dou.ua",
-              icon: "brand-prisma",
-              icon_color: palette.green,
-            },
-            {
-              name: "hackernews",
-              url: "https://news.ycombinator.com",
-              icon: "brand-redhat",
-              icon_color: palette.peach,
-            },
-            {
-              name: "uber engineering",
-              url: "https://www.uber.com/en-GB/blog/london/engineering",
-              icon: "brand-uber",
-              icon_color: palette.red,
-            },
-            {
-              name: "netflix tech blog",
-              url: "https://netflixtechblog.com",
-              icon: "brand-netflix",
-              icon_color: palette.blue,
-            },
-          ],
-        },
-      ],
-    },
-    {
-      name: "chi ll",
-      background_url: "src/img/banners/banner_15.gif",
-      categories: [
-        {
-          name: "social media",
-          links: [
-            {
-              name: "telegram",
-              url: "https://web.telegram.org",
-              icon: "brand-telegram",
-              icon_color: palette.green,
-            },
-            {
-              name: "facebook",
-              url: "https://www.facebook.com",
-              icon: "brand-facebook",
-              icon_color: palette.peach,
-            },
-            {
-              name: "reddit",
-              url: "https://www.reddit.com/r/unixporn",
-              icon: "brand-reddit",
-              icon_color: palette.red,
-            },
-          ],
-        },
-        {
-          name: "gaming",
-          links: [
-            {
-              name: "infiniteBacklog",
-              url: "https://infinitebacklog.net",
-              icon: "device-gamepad",
-              icon_color: palette.green,
-            },
-            {
-              name: "steam",
-              url: "https://store.steampowered.com",
-              icon: "brand-steam",
-              icon_color: palette.peach,
-            },
-            {
-              name: "epicgames",
-              url: "https://store.epicgames.com",
-              icon: "brand-fortnite",
-              icon_color: palette.red,
-            },
-            {
-              name: "nintendo",
-              url: "https://store.nintendo.co.uk",
-              icon: "device-nintendo",
-              icon_color: palette.blue,
-            },
-          ],
-        },
-        {
-          name: "video",
-          links: [
-            {
-              name: "anilist",
-              url: "https://anilist.co/home",
-              icon: "brand-funimation",
+              name: "whatsapp",
+              url: "https://web.whatsapp.com/",
+              icon: "brand-whatsapp",
               icon_color: palette.green,
             },
             {
               name: "youtube",
-              url: "https://www.youtube.com",
+              url: "https://www.youtube.com/",
               icon: "brand-youtube",
               icon_color: palette.peach,
             },
+          ],
+        },
+        {
+          name: "anime",
+          links: [
             {
-              name: "patreon",
-              url: "https://www.patreon.com",
-              icon: "brand-patreon",
+              name: "myanimelist",
+              url: "https://myanimelist.net/",
+              icon: "list-details",
+              icon_color: palette.green,
+            },
+            {
+              name: "anilist",
+              url: "https://anilist.co/user/monokuun/",
+              icon: "brand-funimation",
+              icon_color: palette.peach,
+            },
+            {
+              name: "mirai anime",
+              url: "https://mirai.ai/",
+              icon: "sparkles",
+              icon_color: palette.mauve,
+            },
+            {
+              name: "themes.moe",
+              url: "https://themes.moe/list/anilist/monokuun",
+              icon: "music",
+              icon_color: palette.blue,
+            },
+            {
+              name: "nyaa",
+              url: "https://nyaa.si/",
+              icon: "search",
+              icon_color: palette.yellow,
+            },
+          ],
+        },
+        {
+          name: "utilities",
+          links: [
+            {
+              name: "internet archive",
+              url: "https://archive.org/",
+              icon: "books",
+              icon_color: palette.green,
+            },
+            {
+              name: "pngkey",
+              url: "https://www.pngkey.com/",
+              icon: "photo",
+              icon_color: palette.peach,
+            },
+            {
+              name: "temp mail",
+              url: "https://temp-mail.org/en/",
+              icon: "mail",
+              icon_color: palette.red,
+            },
+          ],
+        },
+      ],
+    },
+    {
+      name: "learn",
+      background_url: "src/img/banners/banner_07.gif",
+      categories: [
+        {
+          name: "programming",
+          links: [
+            {
+              name: "CS50",
+              url: "https://www.edx.org/course/cs50s-introduction-to-computer-science",
+              icon: "school",
+              icon_color: palette.green,
+            },
+            {
+              name: "C++ course",
+              url: "https://teracourses.com/lesson/c-plus-plus-course6-lesson3",
+              icon: "code",
+              icon_color: palette.peach,
+            },
+            {
+              name: "Java course",
+              url: "https://www.coursat.org/course/359/%D8%A7%D9%84%D8%A8%D8%B1%D9%85%D8%AC%D8%A9-%D8%A8%D9%84%D8%BA%D8%A9-java-%D9%85%D9%86-%D8%A7%D9%84%D8%B5%D9%81%D8%B1-%D8%A5%D9%84%D9%89-%D8%A7%D9%84%D8%A3%D8%AD%D8%AA%D8%B1%D8%A7%D9%81/page=1",
+              icon: "brand-java",
               icon_color: palette.red,
             },
             {
-              name: "kyivstar",
-              url: "https://tv.kyivstar.ua",
-              icon: "star-filled",
+              name: "PHP intro",
+              url: "https://www.w3schools.com/php/php_intro.asp",
+              icon: "file-code",
+              icon_color: palette.blue,
+            },
+          ],
+        },
+        {
+          name: "study tools",
+          links: [
+            {
+              name: "edraak",
+              url: "https://programs.edraak.org/learn/",
+              icon: "school",
+              icon_color: palette.green,
+            },
+            {
+              name: "typing club",
+              url: "https://www.typingclub.com/sportal/program-3.game",
+              icon: "keyboard",
+              icon_color: palette.peach,
+            },
+            {
+              name: "diagrams.net",
+              url: "https://app.diagrams.net/?libs=general;uml",
+              icon: "chart-dots",
+              icon_color: palette.red,
+            },
+            {
+              name: "FastSSH blog",
+              url: "https://blog.fastssh.com/",
+              icon: "route",
+              icon_color: palette.mauve,
+            },
+          ],
+        },
+      ],
+    },
+    {
+      name: "media",
+      background_url: "src/img/banners/banner_15.gif",
+      categories: [
+        {
+          name: "watch",
+          links: [
+            {
+              name: "cineby",
+              url: "https://www.cineby.sc/",
+              icon: "movie",
+              icon_color: palette.green,
+            },
+            {
+              name: "movie paradise",
+              url: "https://movieparadise.org/trending/?get=tv",
+              icon: "device-tv",
+              icon_color: palette.peach,
+            },
+            {
+              name: "1Flex",
+              url: "https://www.1flex.nl/",
+              icon: "device-tv",
+              icon_color: palette.blue,
+            },
+            {
+              name: "ArabSeed",
+              url: "https://asd.pics/main4/",
+              icon: "movie",
+              icon_color: palette.red,
+            },
+            {
+              name: "Pahe",
+              url: "https://pahe.ph/",
+              icon: "film",
+              icon_color: palette.mauve,
+            },
+          ],
+        },
+        {
+          name: "subtitles",
+          links: [
+            {
+              name: "subdl",
+              url: "https://subdl.com/",
+              icon: "language",
+              icon_color: palette.green,
+            },
+            {
+              name: "subscene",
+              url: "https://subscene.com/",
+              icon: "subtitles",
+              icon_color: palette.peach,
+            },
+            {
+              name: "subsource",
+              url: "https://subsource.net/subtitle/zom-100-bucket-list-of-the-dead-season-1/arabic/3247907",
+              icon: "file-text",
+              icon_color: palette.red,
+            },
+          ],
+        },
+        {
+          name: "streaming tools",
+          links: [
+            {
+              name: "Stremio addons",
+              url: "https://stremio-addons.netlify.app/",
+              icon: "puzzle",
+              icon_color: palette.green,
+            },
+            {
+              name: "1337x",
+              url: "https://1337x.to/",
+              icon: "search",
+              icon_color: palette.peach,
+            },
+            {
+              name: "Kickass Torrents",
+              url: "https://thekat.app/",
+              icon: "download",
+              icon_color: palette.red,
+            },
+            {
+              name: "The Pirate Bay",
+              url: "https://thepiratebay10.org/",
+              icon: "ship",
+              icon_color: palette.blue,
+            },
+          ],
+        },
+      ],
+    },
+    {
+      name: "games",
+      background_url: "src/img/banners/banner_09.gif",
+      categories: [
+        {
+          name: "gaming",
+          links: [
+            {
+              name: "osu!",
+              url: "https://osu.ppy.sh/beatmapsets",
+              icon: "device-gamepad",
+              icon_color: palette.green,
+            },
+            {
+              name: "FitGirl",
+              url: "https://fitgirl-repacks.site/",
+              icon: "package",
+              icon_color: palette.peach,
+            },
+            {
+              name: "Gnarly",
+              url: "https://www.gnarly-repacks.site/",
+              icon: "package",
+              icon_color: palette.red,
+            },
+            {
+              name: "SteamRIP",
+              url: "https://steamrip.com/",
+              icon: "brand-steam",
+              icon_color: palette.blue,
+            },
+            {
+              name: "AnkerGames",
+              url: "https://ankergames.net/",
+              icon: "device-gamepad",
+              icon_color: palette.mauve,
+            },
+          ],
+        },
+        {
+          name: "game resources",
+          links: [
+            {
+              name: "Rave search",
+              url: "https://ravegamesearch.pages.dev/#gsc.tab=0",
+              icon: "search",
+              icon_color: palette.green,
+            },
+            {
+              name: "Gamdie",
+              url: "https://gamdie.com/",
+              icon: "device-gamepad",
+              icon_color: palette.peach,
+            },
+            {
+              name: "Reddit megathread",
+              url: "https://www.reddit.com/r/Piracy/wiki/megathread/games/#wiki_.1F410_dodi_repacks_.2F_2",
+              icon: "brand-reddit",
+              icon_color: palette.red,
+            },
+            {
+              name: "Pirated games list",
+              url: "https://rentry.org/pgames",
+              icon: "list",
               icon_color: palette.blue,
             },
           ],
