@@ -75,9 +75,9 @@ const default_configuration = {
               icon_color: palette.green,
             },
             {
-              name: "calendar",
-              url: "https://calendar.google.com",
-              icon: "calendar-filled",
+              name: "docs",
+              url: "https://docs.google.com",
+              icon: "file-type-doc",
               icon_color: palette.peach,
             },
             {
